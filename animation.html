@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       @keyframes sliding {
+           0% {
+               background-color: wheat;
+               left: 0;
+               top: 0;
+           }
+
+           25% {
+               top: 225px;
+               background-color: rgb(71, 71, 170);
+               transform: scale(0.5);
+           }
+
+           50% {
+            top: 0;
+            background-color: tomato;
+            transform: scale(1);
+           }
+
+           75% {
+               top:225px;
+               background-color: gold;
+               transform: scale(0.5);
+           }
+
+           100% {
+               background-color: greenyellow;
+               left: 600px;
+               top:0;
+           }
+
+       }
+        .stage {
+            width: 700px;
+            height: 300px;
+            background-color: black;
+        }
+
+        .ball {
+            width: 100px;
+            height: 100px;
+            background-color: limegreen;
+            border-radius: 50%;
+            position: relative;
+            animation: sliding 5s ease-in-out 0.5s infinite alternate;
+            animation-play-state:running;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lest explore animation</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
